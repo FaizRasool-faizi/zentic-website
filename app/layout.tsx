@@ -1,12 +1,15 @@
+import type { Metadata } from "next";
+import React from "react";
 import "./globals.css";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "ZENTIC Studio - Digital Agency",
   description:
     "ZENTIC Studio is a creative digital agency offering Web Development, UI/UX Design, Branding, and Digital Marketing services.",
 };
 
-export default function RootLayout({ children }) {
+// Add type for children
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-white text-gray-800">
