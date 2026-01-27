@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global body styles */
+body {
+  background-color: #ffffff; /* White background for all pages */
+  color: #171717;            /* Dark text */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
