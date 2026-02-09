@@ -56,3 +56,26 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+@keyframes brickBuild {
+  0% {
+    opacity: 1;
+    transform: translateY(24px) scale(1.1);
+  }
+
+  70% {
+    opacity: 0.9;
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    opacity: 0.35; /* stays as texture */
+    transform: translateY(0) scale(1);
+  }
+}
+
+.brick-block {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: brickBuild 1.8s ease-out forwards;
+}

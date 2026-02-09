@@ -72,22 +72,34 @@ export default function ServicesPage() {
             const Icon = service.icon;
             return (
               <FadeIn delay={0.1 * i} key={i}>
-                <div className="group relative rounded-2xl p-[1px]
-                                bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400
-                                bg-[length:200%_200%] animate-gradient-x
-                                opacity-90 hover:opacity-100 transition duration-500">
-                  <div className="h-full bg-gray-900 rounded-2xl p-8 border border-gray-800
-                                  group-hover:border-transparent transform group-hover:-translate-y-1
-                                  transition-all duration-300">
-                    {/* Icon */}
-                    <Icon className="w-7 h-7 text-gray-300 mb-4" />
+                <div
+                  className="
+                    group
+                    relative
+                    bg-gray-900
+                    rounded-2xl
+                    p-8
+                    border
+                    border-gray-800
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-orange-500/40
+                    hover:shadow-[0_0_40px_-10px_rgba(249,115,22,0.6)]
+                  "
+                >
+                  {/* Icon */}
+                  <Icon className="w-7 h-7 text-gray-300 mb-4 group-hover:text-orange-400 transition-colors duration-300" />
 
-                    {/* Title */}
-                    <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    {service.title}
+                  </h3>
 
-                    {/* Description */}
-                    <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
-                  </div>
+                  {/* Description */}
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
               </FadeIn>
             );
