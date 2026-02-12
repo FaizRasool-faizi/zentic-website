@@ -4,25 +4,25 @@ import FadeIn from "@/components/FadeIn";
 
 const services = [
   {
-    title: "Web Design & Development",
-    problem: "Outdated, slow or low-conversion websites.",
-    deliver: "Modern, fast, SEO-friendly and conversion-focused websites.",
-    for: "Startups, businesses & personal brands",
-    icon: "🌐",
+    title: "High-Performance Web Engineering",
+    problem: "Legacy systems that are slow, unscalable, or fail to convert visitors into customers.",
+    deliver: "Next-gen, SEO-optimized platforms built with React, Go, or Rust for extreme speed.",
+    for: "Series A+ Startups, Enterprise Firms, and Visionary Brands.",
+    icon: "⚡", // Or use <Zap size={32} />
   },
   {
-    title: "Agentic AI Solutions",
-    problem: "Manual work, inefficiency & lack of automation.",
-    deliver: "AI agents, workflows & smart automation systems.",
-    for: "Founders, agencies & growing teams",
-    icon: "🤖",
+    title: "Agentic AI & Workflow Automation",
+    problem: "Operational friction, high overhead, and inefficient manual data processing.",
+    deliver: "Custom autonomous AI agents and LLM-integrated pipelines that automate complex tasks.",
+    for: "Founders, Operations Leads, and Data-Driven Teams.",
+    icon: "🧠", // Or use <Cpu size={32} />
   },
   {
-    title: "Graphic & Canva Design",
-    problem: "Weak branding & inconsistent visuals.",
-    deliver: "Logos, social media designs & brand visuals using Canva Pro.",
-    for: "Businesses & content creators",
-    icon: "🎨",
+    title: "Brand Strategy & UI/UX Design",
+    problem: "Inconsistent visual identity that fails to establish trust or authority in the market.",
+    deliver: "Comprehensive brand systems and high-fidelity UI/UX design that commands premium attention.",
+    for: "Innovative Companies and High-Growth Creators.",
+    icon: "💎", // Or use <Layers size={32} />
   },
 ];
 
@@ -45,19 +45,29 @@ export default function Services() {
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((s, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-orange-500 transition">
-                <div className="text-4xl mb-4">{s.icon}</div>
-                <h3 className="text-xl font-semibold mb-4">{s.title}</h3>
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-300 group">
+                <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {s.icon}
+                </div>
+                <h3 className="text-2xl font-bold mb-6 text-white">{s.title}</h3>
 
-                <p className="text-sm text-zinc-400 mb-2">
-                  <strong className="text-white">Problem:</strong> {s.problem}
-                </p>
-                <p className="text-sm text-zinc-400 mb-2">
-                  <strong className="text-white">We Deliver:</strong> {s.deliver}
-                </p>
-                <p className="text-sm text-zinc-400">
-                  <strong className="text-white">Best For:</strong> {s.for}
-                </p>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-orange-500 font-bold mb-1">The Problem</p>
+                    <p className="text-zinc-300 leading-relaxed">{s.problem}</p>
+                  </div>
+                  
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-green-500 font-bold mb-1">The Solution</p>
+                    <p className="text-zinc-300 leading-relaxed">{s.deliver}</p>
+                  </div>
+
+                  <div className="pt-4">
+                    <span className="inline-block px-3 py-1 rounded-full bg-zinc-800 text-zinc-400 text-xs font-medium border border-zinc-700">
+                      Ideal for: {s.for}
+                    </span>
+                  </div>
+                </div>
               </div>
             </FadeIn>
           ))}

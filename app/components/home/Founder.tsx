@@ -13,33 +13,30 @@ export default function Founder() {
         <FadeIn>
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
-              Meet the Founder
+              Engineering the Future of ZENTIC
             </h2>
 
             <p className="text-gray-300">
-              <strong>Faiz Rasool Faizi</strong> — Founder & Lead Technologist
+              <strong>Faiz Rasool </strong> — Founder & Lead Technologist
             </p>
 
             <p className="text-gray-400 leading-relaxed">
-              I’m a multidisciplinary developer and digital strategist working
-              across <strong>Web Design & Development</strong>,{" "}
-              <strong>AI Automation</strong>, <strong>Chatbots</strong>,{" "}
-              <strong>Machine Learning</strong>, and{" "}
-              <strong>Brand Identity Design</strong>.
+              With over 4 years of hands-on experience in high-performance software engineering, 
+              I specialize in building complex digital architectures. My expertise spans across
+              <strong>backend development</strong>,{" "}
+              <strong>PHP/Laravel & Python/Django</strong>, <strong>AI-powered automation</strong>,{" "} and{" "}
+              <strong>high-performance Web Systems.</strong>.
             </p>
 
             <p className="text-gray-400 leading-relaxed">
-              At ZENTIC Studio, we don’t just build websites — we create smart,
-              automated, and scalable digital systems that help businesses save
-              time, increase conversions, and grow faster.
+              At ZENTIC Studio, we don't just build websites; we engineer automated, 
+              scalable systems that solve business bottlenecks. My mission is to bridge the gap between 
+              sophisticated technical engineering and tangible business growth.
             </p>
 
             <p className="text-gray-400 leading-relaxed">
-              <strong>Why I started ZENTIC Studio:</strong><br />
-              I saw too many businesses stuck with slow websites, poor branding,
-              and zero automation. ZENTIC Studio was created to combine clean
-              design, modern tech, AI-powered workflows, and honest communication
-              — all under one roof.
+              <strong>Why ZENTIC?</strong><br />
+              To replace slow, manual workflows with intelligent, high-velocity digital solutions.
             </p>
           </div>
         </FadeIn>

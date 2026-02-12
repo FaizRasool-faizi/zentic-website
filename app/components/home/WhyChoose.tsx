@@ -4,28 +4,28 @@ import FadeIn from "@/components/FadeIn";
 
 const features = [
   {
-    title: "🚀 Results-Driven Approach",
-    text: "We don’t design for looks only. Every website, automation, and AI solution is built to convert, scale, and deliver measurable results.",
+    title: "⚡ Performance-First Engineering",
+    text: "We don't just build sites; we engineer high-velocity systems. Using Next.js, PHP/Laravel, and Python/Django, we ensure your infrastructure is fast, secure, and ready to scale infinitely.",
   },
   {
-    title: "🧠 AI & Automation Expertise",
-    text: "From AI chatbots to smart workflows, we help businesses save time and automate repetitive tasks using modern AI solutions.",
+    title: "🧠 Intelligent AI Integration",
+    text: "Move beyond simple chatbots. We build custom AI-powered workflows and automated pipelines that eliminate manual bottlenecks and drive operational efficiency.",
   },
   {
-    title: "🎨 Design + Brand Identity",
-    text: "Clean UI, strong brand identity, and Canva-based design systems that keep your business consistent across all platforms.",
+    title: "🎨 Strategic Digital Identity",
+    text: "Design with purpose. We create sophisticated UI/UX and cohesive brand systems in Figma that resonate with global audiences and command premium positioning.",
   },
   {
-    title: "⚡ Modern Technology Stack",
-    text: "Next.js, performance-first development, scalable architecture, and future-ready solutions.",
+    title: "🔬 Technical Strategy & Audits",
+    text: "We act as your technical partner. Every project begins with a deep dive into your business logic to ensure the tech stack aligns with your long-term goals.",
   },
   {
-    title: "🤝 Client-Centered Process",
-    text: "Clear communication, honest timelines, and zero fake promises. You stay in control at every step.",
+    title: "🤝 Radical Transparency",
+    text: "No 'agency fluff' or fake promises. You get direct access to lead engineers, clear technical documentation, and honest, data-backed timelines.",
   },
   {
-    title: "📈 Built for Long-Term Growth",
-    text: "We don’t disappear after delivery. We support, improve, and grow alongside your business.",
+    title: "📈 Continuous Evolution",
+    text: "The launch is just the beginning. We provide post-deployment support and iterative improvements to ensure your system evolves with the market.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function WhyChoose() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((item, i) => (
             <FadeIn delay={0.1 * i} key={i}>
-              <div className="h-full p-6 bg-gray-800 border border-gray-700 rounded-xl hover:-translate-y-1 hover:border-orange-500 cursor-pointer transition">
+              <div className="h-full p-8 bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl hover:-translate-y-2 hover:border-orange-500/50 hover:shadow-[0_0_30px_-10px_rgba(249,115,22,0.3)] cursor-pointer transition-all duration-300">
                 <h3 className="text-xl font-semibold mb-3 text-white">
                   {item.title}
                 </h3>

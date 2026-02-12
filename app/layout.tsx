@@ -1,3 +1,4 @@
+import Chatbot from "./components/Chatbot";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./globals.css";
@@ -20,6 +21,7 @@ export default function RootLayout({
 
         <main className="pt-20">
           {children}
+          <Chatbot />
         </main>
 
         <Footer />

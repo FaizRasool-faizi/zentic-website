@@ -12,16 +12,17 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 text-center space-y-6 relative z-10">
         <FadeIn>
           <h1 className="text-4xl md:text-6xl font-semibold text-white leading-tight">
-            We Build High-Conversion Websites
+            Engineered for Velocity.
             <br className="hidden md:block" />
-            For Modern Businesses
+            Built for Scale.
           </h1>
         </FadeIn>
 
         <FadeIn delay={0.1}>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg">
-            Helping startups, creators, and growing brands turn ideas into fast,
-            scalable, and premium digital products.
+            ZENTIC Studio transforms complex business challenges into elite digital products. 
+            Leveraging expert engineering in Go, Rust, and AI, we build robust backend architectures and 
+            high-performance frontends for forward-thinking brands.
           </p>
         </FadeIn>
 
@@ -36,7 +37,7 @@ export default function Hero() {
               shadow-[0_0_30px_rgba(255,165,0,0.9)]
               hover:scale-105 transition-transform duration-300"
             >
-              Get Free Consultation
+              Book a Technical Audit
             </a>
 
             {/* BLACK BUTTON WITH MOVING NEON BORDER */}
@@ -59,7 +60,7 @@ export default function Hero() {
                 shadow-[inset_0_0_10px_rgba(255,165,0,0.35)]
                 hover:text-white transition"
               >
-                View Our Work
+                Explore Our Expertise
               </span>
             </a>
           </div>
