@@ -5,13 +5,16 @@
 @tailwind utilities;
 
 /* Global body styles */
-body {
-  background-color: #ffffff; /* White background for all pages */
-  color: #171717;            /* Dark text */
-  font-family: Arial, Helvetica, sans-serif;
+html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* 🔥 Fix horizontal scroll */
+  background-color: #000000; /* 🔥 Dark background */
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 
 /* Premium animated gradient border */
 .premium-border {

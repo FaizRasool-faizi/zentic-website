@@ -76,7 +76,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-white font-bold">Email Us</h3>
-                    <p className="text-zinc-400 text-sm">hello@zenticstudio.com</p>
+                    <p className="text-zinc-400 text-sm">faiz.rasool.faiiizi@gmail.com</p>
                   </div>
                 </div>
 

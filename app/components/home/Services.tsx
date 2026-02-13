@@ -6,7 +6,7 @@ const services = [
   {
     title: "High-Performance Web Engineering",
     problem: "Legacy systems that are slow, unscalable, or fail to convert visitors into customers.",
-    deliver: "Next-gen, SEO-optimized platforms built with React, Go, or Rust for extreme speed.",
+    deliver: "Next-gen, SEO-optimized platforms built with React/NextJS, PHP/Laravel, or Python/Django for extreme speed.",
     for: "Series A+ Startups, Enterprise Firms, and Visionary Brands.",
     icon: "⚡", // Or use <Zap size={32} />
   },

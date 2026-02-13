@@ -4,11 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import logo from "@/assets/images/logos/ZENTIC Studio Wordmark Logo - Professional Style.png";
+import logo from "@/assets/images/logos/logo1.png";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,48 +31,37 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-        ${
-          scrolled
-            ? "backdrop-blur-md bg-black/70 border-b border-gray-800"
-            : "bg-black"
-        }
-      `}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "backdrop-blur-lg bg-black/80 border-b border-gray-800 shadow-md"
+          : "bg-black"
+      }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        
-        {/* LOGO */}
-        <Link href="/" className="flex items-center gap-3">
+      <div className="max-w-7xl mx-auto px-6 py-3 md:py-4 flex justify-between items-center">
+
+        {/* LOGO (Wordmark Only) */}
+        <Link href="/" className="flex items-center">
           <Image
             src={logo}
             alt="ZENTIC Studio Logo"
-            width={36}
-            height={36}
             priority
+            className="h-14 md:h-18 lg:h-24 w-auto object-contain"
           />
-
-          <span className="text-lg font-semibold tracking-wide">
-            <span className="text-orange-500">ZENTIC</span>{" "}
-            <span className="text-white">Studio</span>
-          </span>
         </Link>
 
-        {/* NAV LINKS */}
-        <nav className="hidden md:flex space-x-8 text-2sm">
+        {/* DESKTOP NAV */}
+        <nav className="hidden md:flex space-x-10 text-sm font-medium tracking-wide">
           {navLinks.map(([label, link]) => {
             const isActive = pathname === link;
-
             return (
               <Link
                 key={label}
                 href={link}
-                className={`relative pb-1 transition-all duration-300
-                  ${
-                    isActive
-                      ? "text-orange-500"
-                      : "text-gray-300 hover:text-orange-500"
-                  }
-                `}
+                className={`relative pb-1 transition-all duration-300 ${
+                  isActive
+                    ? "text-orange-500"
+                    : "text-gray-300 hover:text-orange-500"
+                }`}
               >
                 {label}
                 {isActive && (
@@ -80,6 +71,41 @@ export default function Header() {
             );
           })}
         </nav>
+
+        {/* MOBILE MENU BUTTON */}
+        <button
+          className="md:hidden text-white transition-transform duration-200"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* MOBILE DROPDOWN */}
+      <div
+        className={`md:hidden transition-all duration-300 overflow-hidden ${
+          mobileOpen ? "max-h-96 border-t border-gray-800" : "max-h-0"
+        }`}
+      >
+        <div className="bg-black px-6 py-6 flex flex-col space-y-5 text-base font-medium">
+          {navLinks.map(([label, link]) => {
+            const isActive = pathname === link;
+            return (
+              <Link
+                key={label}
+                href={link}
+                onClick={() => setMobileOpen(false)}
+                className={`transition ${
+                  isActive
+                    ? "text-orange-500"
+                    : "text-gray-300 hover:text-orange-500"
+                }`}
+              >
+                {label}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </header>
   );

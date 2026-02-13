@@ -21,7 +21,7 @@ export default function Hero() {
         <FadeIn delay={0.1}>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg">
             ZENTIC Studio transforms complex business challenges into elite digital products. 
-            Leveraging expert engineering in Go, Rust, and AI, we build robust backend architectures and 
+            Leveraging expert engineering in React/NextJS, PHP/Laravel, Python/Django, and AI, we build robust backend architectures and 
             high-performance frontends for forward-thinking brands.
           </p>
         </FadeIn>

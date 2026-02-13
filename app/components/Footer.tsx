@@ -2,29 +2,25 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/assets/images/logos/ZENTIC Studio Wordmark Logo - Professional Style.png";
+import logo from "@/assets/images/logos/logo1.png";
 
 export default function Footer() {
   return (
     <footer className="mt-32 border-t border-gray-800 bg-black">
-      <div className="max-w-7xl mx-auto px-6 py-12 text-center">
+      <div className="max-w-7xl mx-auto px-6 py-16 text-center">
 
         {/* LOGO */}
-        <div className="flex justify-center items-center gap-3 mb-4">
+        <div className="flex justify-center mb-6">
           <Image
             src={logo}
             alt="ZENTIC Studio Logo"
-            width={32}
-            height={32}
+            priority
+            className="h-16 md:h-20 lg:h-24 w-auto object-contain"
           />
-          <h3 className="text-xl font-semibold tracking-wide">
-            <span className="text-orange-500">ZENTIC</span>{" "}
-            <span className="text-white">Studio</span>
-          </h3>
         </div>
 
         {/* DESCRIPTION */}
-        <p className="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
+        <p className="text-gray-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
           We design and build{" "}
           <span className="text-gray-300">
             premium digital experiences
@@ -34,7 +30,7 @@ export default function Footer() {
         </p>
 
         {/* FOOTER LINKS */}
-        <div className="mt-6 flex justify-center space-x-6 text-sm">
+        <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-sm">
           <Link
             href="/privacy-policy"
             className="text-gray-400 hover:text-orange-500 transition"
@@ -50,7 +46,7 @@ export default function Footer() {
         </div>
 
         {/* COPYRIGHT */}
-        <p className="mt-8 text-xs text-gray-500">
+        <p className="mt-10 text-xs text-gray-500">
           © {new Date().getFullYear()}{" "}
           <span className="text-orange-500">ZENTIC Studio</span>. All rights reserved.
         </p>
